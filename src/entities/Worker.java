@@ -77,7 +77,7 @@ public class Worker {
 		for (HourContract hours : contracts) {
 			cal.setTime(hours.getDate());
 			int hours_Year = cal.get(Calendar.YEAR);
-			int hours_Month = cal.get(Calendar.MONTH);
+			int hours_Month = 1 + cal.get(Calendar.MONTH);
 			if (hours_Year == year && hours_Month == month) {
 				soma += hours.totalValue();
 			}
